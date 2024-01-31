@@ -1,0 +1,23 @@
+<p>graph-example-1 works!</p>
+
+
+<div class="row">
+  <div class="col-6">
+    <app-input-autocomplete (placeChanged)="fromValue = $event" [placeholder]="'Enter a location 1'">
+    </app-input-autocomplete>
+    <!-- <input #inputField1 type="text" class="form-control" placeholder="Enter a location 1" /> -->
+  </div>
+  <div class="col-6">
+    <app-input-autocomplete (placeChanged)="toValue = $event" [placeholder]="'Enter a location 2'">
+    </app-input-autocomplete>
+    <!-- <input #inputField2 type="text" class="form-control" placeholder="Enter a location 2" /> -->
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col">
+    <app-map-display [from]="fromValue" [to]="toValue"></app-map-display>
+    <!-- <google-map [center]="center" [options]="mapOptions" width="100%">
+      <map-marker></map-marker>
+    </google-map> -->
+  </div>
+</div>

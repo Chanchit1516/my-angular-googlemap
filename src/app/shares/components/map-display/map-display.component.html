@@ -1,0 +1,21 @@
+
+
+
+<div class="row">
+    <div class="col">
+        <!-- <button class="btn btn-primary" (click)="goDirection()">Get Direction</button> -->
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col">
+        <google-map #map [zoom]="zoom" width="100%">
+            <map-directions-renderer *ngIf="directionsResult" [directions]="directionsResult"></map-directions-renderer>
+            <map-marker *ngIf="markerPosition" [position]="markerPosition"></map-marker>
+        </google-map>
+    </div>
+</div>
+<div class="row mt-1">
+    <div class="col">
+        <h5 *ngIf="mapUrl"><a href="{{mapUrl}}" target="_blank">View Larger map</a></h5>
+    </div>
+</div>
